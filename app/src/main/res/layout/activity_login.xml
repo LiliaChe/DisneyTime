@@ -41,7 +41,7 @@
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@color/blue"
-            android:textSize="30sp" />
+            android:textSize="30dp" />
         <TextView
             android:layout_gravity="top"
             android:fontFamily="@font/writing"

@@ -23,62 +23,46 @@
         android:layout_gravity="center"
         android:columnCount="2">
         <TextView
+            android:layout_gravity="top"
+            android:fontFamily="@font/writing"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
             android:text="@string/name"
-            android:textSize="24dp"
             android:textColor="@color/white"/>
         <EditText
+            android:background="@color/blue"
+            android:textColorHighlight="@color/white"
+            android:textColor="@color/white"
             android:id="@+id/etName"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:textSize="24dp"/>
+            android:textSize="35dp"/>
         <TextView
+            android:layout_gravity="top"
+            android:textStyle="bold"
+            android:fontFamily="@font/writing"
+            android:textSize="30dp"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
             android:text="@string/password"
-            android:textSize="24dp"
-            android:textColor="#fc0723"/>
+            android:textColor="@color/white"/>
         <EditText
+            android:background="@color/blue"
+            android:textColor="@color/white"
             android:id="@+id/etPassword"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
+            android:textSize="35dp"
             android:inputType="textPassword"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:text="@string/email"
-            android:textSize="24dp"
-            android:textColor="#fc0723"/>
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:inputType="textEmailAddress"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:text="@string/phone"
-            android:textSize="24dp"
-            android:textColor="#fc0723"/>
-        <EditText
-            android:id="@+id/etPhone"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:inputType="phone"/>
     </GridLayout>
     <Button
+        android:textStyle="bold"
+        android:fontFamily="@font/classic"
         android:id="@+id/btnGoReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:text="@string/reg"
-        android:background="#FAF4BF"/>
+        android:textSize="35dp"
+        android:text="@string/reg" />
 </LinearLayout>

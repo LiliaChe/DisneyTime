@@ -12,11 +12,8 @@ public class dbHelper extends SQLiteOpenHelper {
    private static final int DATABASE_VERSION = 1;
    public static final String USERNAME = "username";
    public static final String PASSWORD = "password";
-   public static final String EMAIL = "email";
-   public static final String PHONE = "phone";
    private String SQLCREATE = "create table " + TABLE_NAME +
-           "(" + USERNAME + " text, " + PASSWORD + " text, "+
-           EMAIL + " text, " + PHONE + " text);";
+           "(" + USERNAME + " text, " + PASSWORD + " text);";
    private String SQLDELETE = "drop table if exists " + TABLE_NAME;
    public dbHelper(@Nullable Context context) {
       super(context, DATABASE_NAME, null, DATABASE_VERSION);

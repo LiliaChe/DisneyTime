@@ -34,14 +34,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         data[1] = this.etPassword.getText().toString();
         if (isValid()) {
             if (isEmpty()) {
-                Toast.makeText(this, "There are no entries in the database.\nGo to the main menu.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "User not e", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 return;
             }
             if (!isFound(data[0], data[1])) {
-                Toast.makeText(this, "User with such data was not found.\nGo to the main menu.",
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "User not found, try again!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
             } else {
