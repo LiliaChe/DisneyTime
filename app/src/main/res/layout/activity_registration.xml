@@ -57,12 +57,14 @@
             android:textSize="35dp"
             android:inputType="textPassword"/>
     </GridLayout>
+
     <Button
-        android:textStyle="bold"
-        android:fontFamily="@font/classic"
+        android:layout_gravity="center"
         android:id="@+id/btnGoReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/classic"
+        android:text="sign up"
         android:textSize="35dp"
-        android:text="@string/reg" />
+        android:textStyle="bold" />
 </LinearLayout>

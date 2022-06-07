@@ -1,5 +1,6 @@
 package com.example.disney_time02;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
@@ -29,6 +30,13 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         this.btnGoReg.setOnClickListener(this);
         this.etName = findViewById(R.id.etName);
         this.etPassword = findViewById(R.id.etPassword);
+        setActionBar("Disney Time");
+    }
+    public void setActionBar(String heading) {
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+//        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_shadow_start_color, null)));
+        actionBar.setTitle(heading);
     }
 
     @Override

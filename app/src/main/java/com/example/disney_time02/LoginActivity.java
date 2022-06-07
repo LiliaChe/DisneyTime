@@ -1,5 +1,6 @@
 package com.example.disney_time02;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -26,6 +27,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnGoLog.setOnClickListener(this);
         this.etName = findViewById(R.id.etNameLogin);
         this.etPassword = findViewById(R.id.etPasswordLogin);
+        setActionBar("Disney Time");
+    }
+    public void setActionBar(String heading) {
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+//        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_shadow_start_color, null)));
+        actionBar.setTitle(heading);
     }
     @Override
     public void onClick(View view) {
@@ -34,7 +42,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         data[1] = this.etPassword.getText().toString();
         if (isValid()) {
             if (isEmpty()) {
-                Toast.makeText(this, "User not e", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "User not found", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 return;
@@ -44,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(this, "We are glad to welcome you in our application.",
+                Toast.makeText(this, "Welcome my friend!",
                         Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, StartActivity.class);
                 startActivity(intent);

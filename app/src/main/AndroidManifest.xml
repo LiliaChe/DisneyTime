@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Disney_Time02">
         <activity
+            android:name=".About"
+            android:exported="false" />
+        <activity
+            android:name=".Instructions"
+            android:exported="false" />
+        <activity
+            android:name=".Music"
+            android:exported="false" />
+        <activity
+            android:name=".My_Saves"
+            android:exported="false" />
+        <activity
+            android:name=".Invite_Friend"
+            android:exported="false" />
+        <activity
+            android:name=".MINI_Games"
+            android:exported="false" />
+        <activity
+            android:name=".Movie_Search"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

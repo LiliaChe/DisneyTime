@@ -1,8 +1,10 @@
 package com.example.disney_time02;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.btnLog = findViewById(R.id.btnLog);
         this.btnReg = findViewById(R.id.btnReg);
+        setActionBar("Disney Time");
+    }
+    public void setActionBar(String heading) {
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+//        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_shadow_start_color, null)));
+        actionBar.setTitle(heading);
     }
     public void goReg(View view) {
         Intent intent = new Intent(this, RegistrationActivity.class);
