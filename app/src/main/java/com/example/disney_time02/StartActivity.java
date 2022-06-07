@@ -32,7 +32,7 @@ public class StartActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(final MenuItem item) {
         switch (item.getItemId()){
             case R.id.main:
-                Intent intent1 = new Intent(this, MainActivity.class);
+                Intent intent1 = new Intent(this, StartActivity.class);
                 startActivity(intent1);
                 break;
             case R.id.search:
