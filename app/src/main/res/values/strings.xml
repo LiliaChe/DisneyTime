@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Disney_Time02</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="heading">Insert your name and password-</string>
+    <string name="name">User name:</string>
+    <string name="password">Password:</string>
+    <string name="email">E-mail:</string>
+    <string name="phone">Phone:</string>
+    <string name="login">LogIn</string>
+    <string name="reg">Registration</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>

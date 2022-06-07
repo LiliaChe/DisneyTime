@@ -34,10 +34,13 @@
                 android:textSize="20dp" />
 
             <Button
+                android:textStyle="bold"
+                android:fontFamily="@font/classic"
                 android:id="@+id/btnReg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sign up" />
+                android:text="sign up"
+                android:onClick="goReg"/>
 
         </TableRow>
 
@@ -55,10 +58,13 @@
                 android:textSize="20dp" />
 
             <Button
+                android:textStyle="bold"
+                android:fontFamily="@font/classic"
                 android:id="@+id/btnLog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sign in" />
+                android:text="sign in"
+                android:onClick="goLogin"/>
         </TableRow>
     </TableLayout>
 
