@@ -11,23 +11,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class R_princess extends AppCompatActivity {
+public class R_role extends AppCompatActivity {
     private Button btnPress;
     private ImageView imageVariable;
     private Button btnTryAgain, back;
     private TextView text;
-    private enum variables {ariel, aurora, belle, cinderella, mulan, pocahontas, rapunzel, snow_white, tiana};
+    private enum variables {protagonists, antagonists, dynamic, round, flat, stock};
     private enum result {answer};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rprincess);
+        setContentView(R.layout.activity_rrole);
         setActionBar("");
         this.btnPress = findViewById(R.id.press);
         this.imageVariable = findViewById(R.id.imageVariable);
-        this.btnTryAgain=findViewById(R.id.tryagain);
-        this.back=findViewById(R.id.back);
+        this.btnTryAgain = findViewById(R.id.tryagain);
+        this.back = findViewById(R.id.back);
         this.text = findViewById(R.id.text);
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -37,7 +36,6 @@ public class R_princess extends AppCompatActivity {
                 text.setText(null);
             }
         });
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,15 +49,13 @@ public class R_princess extends AppCompatActivity {
             }
         });
     }
-
     @SuppressLint("SetTextI18n")
     public void printResult() {
-        int num= (int)(Math.random() * 9);
+        int num= (int)(Math.random() * 6);
         result result = getResult(makeShape(num),num);
     }
-
     @SuppressLint("SetTextI18n")
-    public result getResult( variables variable, int num) {
+    public result getResult(variables variable, int num) {
         printShape(variable);
         text.setText(makeName(num));
         return result.answer;
@@ -67,76 +63,55 @@ public class R_princess extends AppCompatActivity {
     public String makeName(int number) {
         switch (number) {
             case 0:
-                return "Princess Ariel";
+                return "Protagonists- the leading character in the story";
             case 1:
-                return "Princess Aurora";
+                return "Antagonists- one that contends with or opposes another";
             case 2:
-                return "Princess Cinderella";
+                return "Dynamic- marked by usually continuous and productive activity or change a dynamic";
             case 3:
-                return "Princess Mulan";
+                return "Round- significant player who is often the star of the story";
             case 4:
-                return "Princess Pocahontas";
-            case 5:
-                return "Princess Rapunzel";
-            case 6:
-                return "Princess Snow White";
-            case 7:
-                return "Princess Tiana";
+                return "Flat- relatively uncomplicated and do not change throughout the story";
             default:
-                return "Princess Belle";
+                return "Stock- a character that represents a type and that is recognizable as belonging to a certain genre";
         }
     }
     public variables makeShape(int number) {
         switch (number) {
             case 0:
-                return variables.ariel;
+                return variables.protagonists;
             case 1:
-                return variables.aurora;
+                return variables.antagonists;
             case 2:
-                return variables.cinderella;
+                return variables.dynamic;
             case 3:
-                return variables.mulan;
+                return variables.round;
             case 4:
-                return variables.pocahontas;
-            case 5:
-                return variables.rapunzel;
-            case 6:
-                return variables.snow_white;
-            case 7:
-                return variables.tiana;
+                return variables.flat;
             default:
-                return variables.belle;
+                return variables.stock;
         }
     }
 
     public void printShape(variables variable) {
         switch (variable) {
-            case ariel:
-                imageVariable.setImageResource(R.drawable.ariel);
+            case protagonists:
+                imageVariable.setImageResource(R.drawable.mickey);
                 break;
-            case aurora:
-                imageVariable.setImageResource(R.drawable.aurora);
+            case antagonists:
+                imageVariable.setImageResource(R.drawable.ursula);
                 break;
-            case cinderella:
-                imageVariable.setImageResource(R.drawable.cinderella);
+            case dynamic:
+                imageVariable.setImageResource(R.drawable.aladdin);
                 break;
-            case mulan:
+            case round:
                 imageVariable.setImageResource(R.drawable.mulan);
                 break;
-            case pocahontas:
+            case flat:
                 imageVariable.setImageResource(R.drawable.pocahontas);
                 break;
-            case rapunzel:
-                imageVariable.setImageResource(R.drawable.rapunzel);
-                break;
-            case snow_white:
-                imageVariable.setImageResource(R.drawable.snow_white);
-                break;
-            case tiana:
-                imageVariable.setImageResource(R.drawable.tiana);
-                break;
             default:
-                imageVariable.setImageResource(R.drawable.belle);
+                imageVariable.setImageResource(R.drawable.lady);
         }
     }
     public void setActionBar(String heading) {

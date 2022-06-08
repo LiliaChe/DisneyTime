@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,65 +27,47 @@
         android:layout_height="wrap_content"
         android:text="Randomizer for you:" />
 
-    <RadioGroup
+    <Button
+        android:gravity="left"
+        android:fontFamily="@font/disney"
+        android:id="@+id/button1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="Which princess are you?"
+        android:onClick="goPlay1"/>
+    <Button
+        android:gravity="left"
+        android:fontFamily="@font/disney"
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Which disney character are you?"
+        android:onClick="goPlay1"/>
+    <Button
+        android:gravity="left"
+        android:fontFamily="@font/disney"
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Which role suits you the best?"
+        android:onClick="goPlay2"/>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Which princess are you?"
-            android:onClick="goPlay"/>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/disney"
+        android:gravity="left"
+        android:onClick="goPlay1"
+        android:text="What you should eat while watching?"
+        android:textStyle="bold" />
 
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:text="Which movie you should watch?"
-            android:textSize="25dp" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/playing" />
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:text="Which meal you should eat?"
-            android:textSize="25dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:text="Which desert you should eat?"
-            android:textSize="25dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:text="Which princess are you?"
-            android:textSize="25dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:text="Which disney character are you?"
-            android:textSize="25dp" />
-
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:text="Which role suits you the best?"
-            android:textSize="25dp" />
-    </RadioGroup>
     <Button
         android:textStyle="bold"
         android:fontFamily="@font/classic"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".R_princess"
+    tools:context=".R_role"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="#FFF9C4">
@@ -16,7 +16,7 @@
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Which princess are you?"
+        android:text="Which role suits you the best?"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="139dp"
         tools:layout_editor_absoluteY="0dp" />
