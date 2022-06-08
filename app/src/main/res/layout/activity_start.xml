@@ -9,10 +9,11 @@
     android:gravity="center_horizontal"
     android:background="#FFF9C4">
     <TextView
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/font"
-        android:text="INTERSTING FACTS"
+        android:fontFamily="@font/reg"
+        android:text="INTERESTING FACTS"
         android:textSize="28sp"
         android:textColor="@color/blue"
         android:layout_margin="10dp"/>
