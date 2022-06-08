@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class My_Saves extends AppCompatActivity {
 
@@ -81,5 +82,8 @@ public class My_Saves extends AppCompatActivity {
         });
         builder.setNegativeButton("no", (dialog, which) -> dialog.dismiss());
         return builder.create();
+    }
+    public void goBack(View view) {
+        finish();
     }
 }

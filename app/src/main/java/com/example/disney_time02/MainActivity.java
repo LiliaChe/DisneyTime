@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.btnLog = findViewById(R.id.btnLog);
         this.btnReg = findViewById(R.id.btnReg);
-        setActionBar("Disney Time");
+        setActionBar("Welcome to Disney Time!");
     }
     public void setActionBar(String heading) {
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
-//        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_shadow_start_color, null)));
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_dark_background, null)));
         actionBar.setTitle(heading);
     }
     public void goReg(View view) {
@@ -33,5 +33,8 @@ public class MainActivity extends AppCompatActivity {
     public void goLogin(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+    }
+    public void goBack(View view) {
+        finish();
     }
 }

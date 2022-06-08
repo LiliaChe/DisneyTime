@@ -57,11 +57,10 @@
             android:onClick="stop"
             android:text="stop" />
     </LinearLayout>
-
     <Button
-        android:layout_margin="50dp"
         android:id="@+id/b_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="goBack"
         android:text="BACK" />
 </LinearLayout>

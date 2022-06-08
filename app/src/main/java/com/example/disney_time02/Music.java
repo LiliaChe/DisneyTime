@@ -92,4 +92,7 @@ public class Music extends AppCompatActivity {
     public void stop(View view) {
         stopService(new Intent(Music.this, MyService.class));
     }
+    public void goBack(View view) {
+        finish();
+    }
 }

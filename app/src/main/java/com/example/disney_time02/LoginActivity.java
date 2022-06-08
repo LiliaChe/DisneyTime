@@ -1,12 +1,15 @@
 package com.example.disney_time02;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,12 +30,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnGoLog.setOnClickListener(this);
         this.etName = findViewById(R.id.etNameLogin);
         this.etPassword = findViewById(R.id.etPasswordLogin);
-        setActionBar("Disney Time");
+        setActionBar("Sign in");
     }
     public void setActionBar(String heading) {
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
-//        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(androidx.cardview.R.color.cardview_shadow_start_color, null)));
         actionBar.setTitle(heading);
     }
     @Override
@@ -109,5 +111,46 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return false;
         }
         return true;
+    }
+    public void goBack(View view) {
+        finish();
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.start_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(final MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.main_start:
+                Intent intent1 = new Intent(this, MainActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.login:
+                Intent intent2 = new Intent(this, LoginActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.reg:
+                Intent intent3 = new Intent(this, RegistrationActivity.class);
+                startActivity(intent3);
+                break;
+            case R.id.exit:
+                AlertDialog dialog = yesNo();
+                dialog.show();
+                break;
+        }
+        return true;
+    }
+    public AlertDialog yesNo() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirm");
+        builder.setMessage("Are you sure?");
+        builder.setPositiveButton("yes", (dialog, which) -> {
+            finish();
+            finishAffinity();
+            dialog.dismiss();
+        });
+        builder.setNegativeButton("no", (dialog, which) -> dialog.dismiss());
+        return builder.create();
     }
 }

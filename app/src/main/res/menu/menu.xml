@@ -26,5 +26,5 @@
         android:title="About the app" />
     <item
         android:id="@+id/exit"
-        android:title="exit"/>
+        android:title="Exit"/>
 </menu>
