@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Disney_Time02">
         <activity
+            android:name=".R_food"
+            android:exported="false" />
+        <activity
+            android:name=".R_character"
+            android:exported="false" />
+        <activity
             android:name=".R_role"
             android:exported="false" />
         <activity

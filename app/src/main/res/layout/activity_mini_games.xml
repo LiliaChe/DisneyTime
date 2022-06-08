@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Which disney character are you?"
-        android:onClick="goPlay1"/>
+        android:onClick="goPlay2"/>
     <Button
         android:gravity="left"
         android:fontFamily="@font/disney"
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Which role suits you the best?"
-        android:onClick="goPlay2"/>
+        android:onClick="goPlay3"/>
 
     <Button
         android:id="@+id/button4"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/disney"
         android:gravity="left"
-        android:onClick="goPlay1"
+        android:onClick="goPlay4"
         android:text="What you should eat while watching?"
         android:textStyle="bold" />
 

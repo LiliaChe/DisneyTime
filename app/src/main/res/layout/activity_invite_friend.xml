@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Invite_Friend"
     android:orientation="vertical"
     android:gravity="center_horizontal"
@@ -19,7 +20,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp">
+        android:layout_height="wrap_content">
 
         <TableRow
             android:layout_width="374dp"
@@ -65,8 +66,11 @@
                 android:padding="10dp"
                 android:textSize="20sp"/>
         </TableRow>
-
     </TableLayout>
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/friends"/>
     <Button
         android:textStyle="bold"
         android:fontFamily="@font/classic"

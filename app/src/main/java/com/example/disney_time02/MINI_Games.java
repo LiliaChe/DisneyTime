@@ -91,7 +91,15 @@ public class MINI_Games extends AppCompatActivity {
         startActivity(intent);
     }
     public void goPlay2(View view) {
+        Intent intent = new Intent(this, R_character.class);
+        startActivity(intent);
+    }
+    public void goPlay3(View view) {
         Intent intent = new Intent(this, R_role.class);
+        startActivity(intent);
+    }
+    public void goPlay4(View view) {
+        Intent intent = new Intent(this, R_food.class);
         startActivity(intent);
     }
 }
