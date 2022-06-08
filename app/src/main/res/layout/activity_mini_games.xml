@@ -30,6 +30,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which princess are you?"
+            android:onClick="goPlay"/>
+
         <RadioButton
             android:id="@+id/radioButton1"
             android:layout_width="match_parent"
@@ -79,11 +86,8 @@
             android:textSize="25dp" />
     </RadioGroup>
     <Button
-        android:id="@+id/b_submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="submit" />
-    <Button
+        android:textStyle="bold"
+        android:fontFamily="@font/classic"
         android:id="@+id/b_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

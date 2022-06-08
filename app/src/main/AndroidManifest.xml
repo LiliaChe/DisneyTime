@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Disney_Time02">
         <activity
+            android:name=".R_princess"
+            android:exported="false" />
+        <activity
             android:name=".About"
             android:exported="false" />
         <activity
@@ -48,6 +51,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".MyService" />
     </application>
 
 </manifest>

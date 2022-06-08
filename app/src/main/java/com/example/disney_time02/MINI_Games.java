@@ -10,14 +10,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MINI_Games extends AppCompatActivity {
-
+    //private Button b_submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mini_games);
         setActionBar("");
+        //this.b_submit = findViewById(R.id.b_submit);
+        //this.b_submit.setVisibility(View.INVISIBLE);
     }
     public void setActionBar(String heading) {
         ActionBar actionBar = getSupportActionBar();
@@ -85,5 +88,9 @@ public class MINI_Games extends AppCompatActivity {
     }
     public void goBack(View view) {
         finish();
+    }
+    public void goPlay(View view) {
+        Intent intent = new Intent(this, R_princess.class);
+        startActivity(intent);
     }
 }

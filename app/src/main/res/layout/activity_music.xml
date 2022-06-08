@@ -31,7 +31,7 @@
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ariel" />
+        app:srcCompat="@drawable/music_ariel" />
 
     <LinearLayout
         android:gravity="center"
@@ -40,17 +40,21 @@
         android:orientation="horizontal">
 
         <Button
+            android:textStyle="bold"
+            android:fontFamily="@font/classic"
             android:id="@+id/play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="play"
             android:text="play" />
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text=""/>
 
         <Button
+            android:textStyle="bold"
+            android:fontFamily="@font/classic"
             android:id="@+id/stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +62,8 @@
             android:text="stop" />
     </LinearLayout>
     <Button
+        android:textStyle="bold"
+        android:fontFamily="@font/classic"
         android:id="@+id/b_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

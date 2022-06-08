@@ -20,7 +20,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     private SQLiteDatabase database;
     private dbHelper dbHelper;
     private Button btnGoReg;
-    private EditText etName, etPassword, etEmail, etPhone;
+    private EditText etName, etPassword;
     private User user;
 
     @Override
