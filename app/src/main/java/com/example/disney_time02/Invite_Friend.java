@@ -6,18 +6,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Invite_Friend extends AppCompatActivity {
-
+    private Button btnMessage;
+    private EditText edNumber, edMovie;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invite_friend);
         setActionBar("");
+        this.btnMessage = findViewById(R.id.message);
+        this.edNumber = findViewById(R.id.number);
+        this.edMovie = findViewById(R.id.movie);
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if((String.valueOf(edNumber.getText()).equals(""))||(String.valueOf(edMovie.getText()).equals(""))){
+                    Toast.makeText(getApplicationContext(), "please insert phone number or movie's name!", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.fromParts("sms", String.valueOf(edNumber.getText()), null)).
+                            putExtra("sms_body", write()));
+                }
+            }
+        });
+    }
+    public String write(){
+        String text = String.valueOf(edMovie.getText());
+        return ("Let's watch together "+'"'+text+'"'+", which is a Disney movie!");
+
     }
     public void setActionBar(String heading) {
         ActionBar actionBar = getSupportActionBar();

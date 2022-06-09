@@ -8,18 +8,20 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="#FFF9C4">
+
     <TextView
-        android:textStyle="bold"
-        android:fontFamily="@font/reg"
-        android:textSize="40sp"
-        android:textColor="@color/blue"
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/reg"
         android:text="What you should eat while watching?"
         android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="40sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="139dp"
         tools:layout_editor_absoluteY="0dp" />
+
     <ImageView
         android:background="#FFF9C4"
         android:id="@+id/imageVariable"

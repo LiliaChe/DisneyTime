@@ -16,7 +16,7 @@ public class R_role extends AppCompatActivity {
     private ImageView imageVariable;
     private Button btnTryAgain, back;
     private TextView text;
-    private enum variables {protagonists, antagonists, dynamic, round, flat, stock};
+    private enum variables {simba, scar, timon, nala, mufasa};
     private enum result {answer};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class R_role extends AppCompatActivity {
     }
     @SuppressLint("SetTextI18n")
     public void printResult() {
-        int num= (int)(Math.random() * 6);
+        int num= (int)(Math.random() * 5);
         result result = getResult(makeShape(num),num);
     }
     @SuppressLint("SetTextI18n")
@@ -63,55 +63,48 @@ public class R_role extends AppCompatActivity {
     public String makeName(int number) {
         switch (number) {
             case 0:
-                return "Protagonists- the leading character in the story";
+                return "The main character";
             case 1:
-                return "Antagonists- one that contends with or opposes another";
+                return "The antagonists against the main character";
             case 2:
-                return "Dynamic- marked by usually continuous and productive activity or change a dynamic";
+                return "Secondary character";
             case 3:
-                return "Round- significant player who is often the star of the story";
-            case 4:
-                return "Flat- relatively uncomplicated and do not change throughout the story";
+                return "The one that the main character is in love with";
             default:
-                return "Stock- a character that represents a type and that is recognizable as belonging to a certain genre";
+                return "The one that symbolizes the genre";
         }
     }
     public variables makeShape(int number) {
         switch (number) {
             case 0:
-                return variables.protagonists;
+                return variables.simba;
             case 1:
-                return variables.antagonists;
+                return variables.scar;
             case 2:
-                return variables.dynamic;
+                return variables.timon;
             case 3:
-                return variables.round;
-            case 4:
-                return variables.flat;
+                return variables.nala;
             default:
-                return variables.stock;
+                return variables.mufasa;
         }
     }
 
     public void printShape(variables variable) {
         switch (variable) {
-            case protagonists:
-                imageVariable.setImageResource(R.drawable.mickey);
+            case simba:
+                imageVariable.setImageResource(R.drawable.simba);
                 break;
-            case antagonists:
-                imageVariable.setImageResource(R.drawable.ursula);
+            case scar:
+                imageVariable.setImageResource(R.drawable.scar);
                 break;
-            case dynamic:
-                imageVariable.setImageResource(R.drawable.aladdin);
+            case timon:
+                imageVariable.setImageResource(R.drawable.timon);
                 break;
-            case round:
-                imageVariable.setImageResource(R.drawable.mulan);
-                break;
-            case flat:
-                imageVariable.setImageResource(R.drawable.pocahontas);
+            case nala:
+                imageVariable.setImageResource(R.drawable.nala);
                 break;
             default:
-                imageVariable.setImageResource(R.drawable.lady);
+                imageVariable.setImageResource(R.drawable.mufasa);
         }
     }
     public void setActionBar(String heading) {

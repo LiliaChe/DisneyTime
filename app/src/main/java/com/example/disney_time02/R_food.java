@@ -16,13 +16,12 @@ public class R_food extends AppCompatActivity {
     private ImageView imageVariable;
     private Button btnTryAgain, back;
     private TextView text;
-    private enum variables {popcorn, hot_dog, ice_cream, pancake};
+    private enum variables {popcorn, hot_dog, ice_cream, pancake, gummy, nachos};
     private enum result {answer};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rfood);
-        setContentView(R.layout.activity_rcharacter);
         setActionBar("");
         this.btnPress = findViewById(R.id.press);
         this.imageVariable = findViewById(R.id.imageVariable);
@@ -52,7 +51,7 @@ public class R_food extends AppCompatActivity {
     }
     @SuppressLint("SetTextI18n")
     public void printResult() {
-        int num= (int)(Math.random() * 7);
+        int num= (int)(Math.random() * 6);
         result result = getResult(makeShape(num),num);
     }
 
@@ -67,9 +66,13 @@ public class R_food extends AppCompatActivity {
             case 0:
                 return "popcorn";
             case 1:
-                return "hot_dog";
+                return "hot dog";
             case 2:
-                return "ice_cream";
+                return "ice cream";
+            case 3:
+                return "gummy";
+            case 4:
+                return "nachos";
             default:
                 return "pancake";
         }
@@ -82,6 +85,10 @@ public class R_food extends AppCompatActivity {
                 return variables.hot_dog;
             case 2:
                 return variables.ice_cream;
+            case 3:
+                return variables.gummy;
+            case 4:
+                return variables.nachos;
             default:
                 return variables.pancake;
         }
@@ -97,6 +104,12 @@ public class R_food extends AppCompatActivity {
                 break;
             case ice_cream:
                 imageVariable.setImageResource(R.drawable.ice_cream);
+                break;
+            case gummy:
+                imageVariable.setImageResource(R.drawable.gummy);
+                break;
+            case nachos:
+                imageVariable.setImageResource(R.drawable.nachos);
                 break;
             default:
                 imageVariable.setImageResource(R.drawable.pancake);
