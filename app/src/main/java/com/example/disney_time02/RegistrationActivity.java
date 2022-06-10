@@ -124,8 +124,12 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             message = "";
             return false;
         }
-        Toast.makeText(this, "You sign up", Toast.LENGTH_SHORT).show();
-        return true;
+        else{
+            Toast.makeText(this, "You sign up", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return true;
+        }
     }
     public void goBack(View view) {
         finish();

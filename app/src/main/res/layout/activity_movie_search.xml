@@ -79,22 +79,6 @@
             android:fontFamily="@font/reg"
             android:textSize="25dp"
             android:text="Drama" />
-
-        <RadioButton
-            android:id="@+id/RadioButton7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:textSize="25dp"
-            android:text="Animated" />
-
-        <RadioButton
-            android:id="@+id/RadioButton8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/reg"
-            android:textSize="25dp"
-            android:text="Realistic" />
     </RadioGroup>
 
     <Button
