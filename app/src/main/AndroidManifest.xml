@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Disney_Time02">
         <activity
+            android:name=".Movie_Page"
+            android:exported="false" />
+        <activity
             android:name=".R_food"
             android:exported="false" />
         <activity
@@ -56,9 +59,11 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service android:name=".MyService" />
     </application>
 

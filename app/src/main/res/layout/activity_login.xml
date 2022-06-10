@@ -58,7 +58,7 @@
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@color/blue"
-            android:inputType="textPassword"
+            android:inputType="numberPassword"
             android:textSize="30sp" />
     </GridLayout>
     <Button
